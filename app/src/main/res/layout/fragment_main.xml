@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#85C1E9"
+    tools:context=".MainFragment">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:gravity="center"
+        android:text="@string/AbingtonHeightsSoccer"
+        android:textColor="#1A5276"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ahlogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ahlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+    <Button
+        android:id="@+id/schedule_button"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/white"
+        android:text="Schedule"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/announcements_button"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="@+id/announcements_button"
+        app:layout_constraintTop_toBottomOf="@+id/announcements_button" />
+
+    <Button
+        android:id="@+id/roster_button"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Roster"
+        android:textStyle="bold"
+        android:textColor="#3F51B5"
+        app:layout_constraintEnd_toEndOf="@+id/schedule_button"
+        app:layout_constraintStart_toStartOf="@+id/schedule_button"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_button" />
+
+    <Button
+        android:id="@+id/acheivements_button"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Achievements"
+        android:textColor="#3F51B5"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/roster_button"
+        app:layout_constraintStart_toStartOf="@+id/roster_button"
+        app:layout_constraintTop_toBottomOf="@+id/roster_button" />
+
+    <Button
+        android:id="@+id/announcements_button"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/white"
+        android:textColor="#3F51B5"
+        android:text="Announcements"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ahlogo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

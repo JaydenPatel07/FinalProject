@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/achievementsFragment"
+        android:name="com.example.finalproject.AchievementsFragment"
+        android:label="fragment_achievements"
+        tools:layout="@layout/fragment_achievements" />
+    <fragment
+        android:id="@+id/rosterFragment"
+        android:name="com.example.finalproject.RosterFragment"
+        android:label="fragment_roster"
+        tools:layout="@layout/fragment_roster" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.finalproject.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_achievementsFragment"
+            app:destination="@id/achievementsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_rosterFragment"
+            app:destination="@id/rosterFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_announcementsFragment"
+            app:destination="@id/announcementsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/announcementsFragment"
+        android:name="com.example.finalproject.AnnouncementsFragment"
+        android:label="fragment_announcements"
+        tools:layout="@layout/fragment_announcements" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.finalproject.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
+</navigation>
