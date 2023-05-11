@@ -20,16 +20,20 @@ class MainFragment : Fragment() {
         val rootView = binding.root
 
         binding.announcementsButton.setOnClickListener {
-        rootView.findNavController().navigate(R.id.action_mainFragment_to_announcementsFragment)
-    }
+            val action = MainFragmentDirections.actionMainFragmentToAnnouncementsFragment()
+            rootView.findNavController().navigate(action)
+        }
         binding.acheivementsButton.setOnClickListener {
-            rootView.findNavController().navigate(R.id.action_mainFragment_to_achievementsFragment)
+            val action = MainFragmentDirections.actionMainFragmentToAchievementsFragment()
+            rootView.findNavController().navigate(action)
         }
         binding.rosterButton.setOnClickListener {
-            rootView.findNavController().navigate(R.id.action_mainFragment_to_rosterFragment)
+            val action = MainFragmentDirections.actionMainFragmentToRosterFragment()
+            rootView.findNavController().navigate(action)
         }
         binding.scheduleButton.setOnClickListener {
-            rootView.findNavController().navigate(R.id.action_mainFragment_to_scheduleFragment)
+            val action = MainFragmentDirections.actionMainFragmentToScheduleFragment()
+            rootView.findNavController().navigate(action)
         }
 
 return rootView
