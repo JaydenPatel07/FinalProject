@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.navigation.findNavController
 import com.example.finalproject.databinding.FragmentAchievementsBinding
 
 class AchievementsFragment : Fragment() {
@@ -38,8 +39,8 @@ class AchievementsFragment : Fragment() {
 
                 }
                 if (team_or_individual == "2022 Individual Achievements") {
-                    binding.achievements.text = "Robert Saunders:\nPA All State, All Region Team, League Player of the Year, League All Star, NEPA All Star, Top 5 in League Assists, Top 5 in League Goals, \nKohen Stiles:\nAll Region Team, League All Star, NEPA All Star, League Leader in Goals\nJack Cowgill:\nAll Region Team, League All Star, NEPA All Star, UNICO Senior All Star Most Clean Sheets in League\nByron Maldonado:\nAll Region Team, League All Star, NEPA All Star\nJayden Patel\nNEPA All Star, UNICO Senior All Star Top 5 League Assists\nNiko Williams:\nLeague All Star, NEPA All Star\n" + "Michael Maldonado:\n" + "League All Star, NEPA All Star\nPhilip Sykes:\nLeague All Star, NEPA All Star"
-                }
+                    val action = AchievementsFragmentDirections.actionAchievementsFragmentToIndividualAchievementsFragment()
+                    rootView.findNavController().navigate(action)                }
 
             }
             override fun onNothingSelected(adapterView: AdapterView<*>?) {

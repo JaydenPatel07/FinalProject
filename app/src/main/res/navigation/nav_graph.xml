@@ -9,7 +9,11 @@
         android:id="@+id/achievementsFragment"
         android:name="com.example.finalproject.AchievementsFragment"
         android:label="fragment_achievements"
-        tools:layout="@layout/fragment_achievements" />
+        tools:layout="@layout/fragment_achievements" >
+        <action
+            android:id="@+id/action_achievementsFragment_to_individualAchievementsFragment"
+            app:destination="@id/individualAchievementsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/rosterFragment"
         android:name="com.example.finalproject.RosterFragment"
@@ -43,4 +47,8 @@
         android:name="com.example.finalproject.ScheduleFragment"
         android:label="fragment_schedule"
         tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/individualAchievementsFragment"
+        android:name="com.example.finalproject.IndividualAchievementsFragment"
+        android:label="IndividualAchievementsFragment" />
 </navigation>
