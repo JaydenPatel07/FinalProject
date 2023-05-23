@@ -41,7 +41,8 @@ class AchievementsFragment : Fragment() {
                 if (team_or_individual == "2022 Individual Achievements") {
                     val action = AchievementsFragmentDirections.actionAchievementsFragmentToIndividualAchievementsFragment()
                     rootView.findNavController().navigate(action)                }
-
+                binding.achievements.text = "District 2 AAAA Champions\nLackawanna League Division 1 Champions\n14-0 League Record\n18-2 Overall Record\n+52 Goal Differential\nAllowed 5 goals in 14 League Games\n10 Shutouts in 14 league games"
+                binding.spinner.setSelection(0)
             }
             override fun onNothingSelected(adapterView: AdapterView<*>?) {
 
