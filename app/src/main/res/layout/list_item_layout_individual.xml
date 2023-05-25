@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#85C1E9"
     android:padding="8dp">
 
     <ImageView
-        android:id="@+id/player_pic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:src="@drawable/ic_launcher_foreground"
+        android:id="@+id/home_pic"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_foreground" />
 
     <TextView
         android:id="@+id/name"
@@ -23,7 +24,7 @@
         android:layout_marginBottom="8dp"
         tools:text="Name"
         android:textSize="24sp"
-        app:layout_constraintLeft_toRightOf="@id/player_pic"
+        app:layout_constraintLeft_toRightOf="@id/home_pic"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -34,7 +35,7 @@
         android:layout_marginTop="8dp"
         tools:text="achievements"
         android:textSize="14sp"
-        app:layout_constraintLeft_toRightOf="@id/player_pic"
+        app:layout_constraintLeft_toRightOf="@id/home_pic"
         app:layout_constraintTop_toBottomOf="@id/name" />
 
     <TextView
@@ -42,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="24dp"
         android:background="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/achievements" />
