@@ -1,9 +1,9 @@
 package com.example.finalproject
 
 import androidx.recyclerview.widget.RecyclerView
-import com.example.finalproject.databinding.FragmentIndividualAchievementsFragmentBinding
+import com.example.finalproject.databinding.ListItemLayoutIndividualBinding
 
-class PlayerHolder(val binding: FragmentIndividualAchievementsFragmentBinding) :
+class PlayerHolder(val binding: ListItemLayoutIndividualBinding) :
     RecyclerView.ViewHolder(binding.root) {
     private lateinit var currentPlayer: Player
 
@@ -12,7 +12,7 @@ class PlayerHolder(val binding: FragmentIndividualAchievementsFragmentBinding) :
         binding.name.text = currentPlayer.name
         binding.achievements.text = currentPlayer.achievements
         binding.grade.text = currentPlayer.year
-        binding.imageViewCourseImage.setImageResource(currentPlayer.playerImageResourceID)
+        binding.playerPic.setImageResource(currentPlayer.playerImageResourceID)
 
     }
 }
