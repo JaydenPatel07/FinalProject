@@ -1,4 +1,4 @@
 package com.example.finalproject
 
-data class Game(val Opponent: String, val ahScore: Int, val opponentScore: Int, val date:String, val courseImageResourceId: Int) {
-}
+class Game (val homeName: String,val awayName: String,val homeScore:Int, val awayScore:Int, val homePicResourceID: Int, val awayPicResourceID: Int  )
+

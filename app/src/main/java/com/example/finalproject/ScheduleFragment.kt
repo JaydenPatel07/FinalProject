@@ -5,17 +5,30 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.finalproject.databinding.FragmentIndividualRecyclerViewBinding
+import com.example.finalproject.databinding.FragmentScheduleBinding
 
 
 class ScheduleFragment : Fragment() {
+
+    private var _binding: FragmentIndividualRecyclerViewBinding? = null
+    private val binding get() = _binding!!
+
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_schedule, container, false)
+        _binding = ScheduleFragment.inflate(inflater, container, false)
+        val rootView = binding.root
+
+
+        val myAdapter = PlayerAdapter(players)
+        binding.recyclerView.adapter = myAdapter
+
+        return rootView
+
     }
 
 }

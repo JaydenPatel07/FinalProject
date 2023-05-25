@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.example.finalproject.databinding.FragmentIndividualRecyclerViewBinding
 
 class IndividualAchievementsFragment : Fragment() {
-    var team_or_individual = ""
     private var _binding: FragmentIndividualRecyclerViewBinding? = null
     private val binding get() = _binding!!
 

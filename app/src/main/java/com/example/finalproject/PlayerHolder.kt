@@ -13,7 +13,7 @@ class PlayerHolder(val binding: ListItemLayoutIndividualBinding) :
         binding.name.text = currentPlayer.name
         binding.achievements.text = currentPlayer.achievements
         binding.grade.text = currentPlayer.year
-        binding.playerPic.setImageResource(currentPlayer.playerImageResourceID)
+        binding.homePic.setImageResource(currentPlayer.playerImageResourceID)
 
     }
 }
