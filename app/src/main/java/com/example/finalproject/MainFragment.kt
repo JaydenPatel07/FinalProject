@@ -19,7 +19,7 @@ class MainFragment : Fragment() {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
         val rootView = binding.root
 
-        binding.announcementsButton.setOnClickListener {
+        binding.contactsButton.setOnClickListener {
             val action = MainFragmentDirections.actionMainFragmentToAnnouncementsFragment()
             rootView.findNavController().navigate(action)
         }

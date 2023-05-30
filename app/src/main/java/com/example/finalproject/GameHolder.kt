@@ -15,7 +15,7 @@ class GameHolder(val binding: ListItemScheduleBinding) :
         binding.scoreHome.text = currentGame.homeScore.toString()
         binding.awayScore.text = currentGame.awayScore.toString()
         binding.awayText.text = currentGame.awayName
-        binding.homeText.text = currentGame.awayName
+        binding.homeText.text = currentGame.homeName
 
         if(currentGame.winOrNot){
             binding.scoreHome.setTextColor(Color.GREEN)
