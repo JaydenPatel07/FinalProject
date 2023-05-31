@@ -31,17 +31,12 @@
             android:id="@+id/action_mainFragment_to_rosterFragment"
             app:destination="@id/rosterFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_announcementsFragment"
-            app:destination="@id/announcementsFragment" />
-        <action
             android:id="@+id/action_mainFragment_to_scheduleFragment"
             app:destination="@id/scheduleFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/announcementsFragment"
-        android:name="com.example.finalproject.ContactsFragment"
-        android:label="fragment_announcements"
-        tools:layout="@layout/contacts_announcements" />
     <fragment
         android:id="@+id/scheduleFragment"
         android:name="com.example.finalproject.ScheduleFragment"
@@ -51,4 +46,9 @@
         android:id="@+id/individualAchievementsFragment"
         android:name="com.example.finalproject.IndividualAchievementsFragment"
         android:label="IndividualAchievementsFragment" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.example.finalproject.ContactsFragment"
+        android:label="contacts_fragment"
+        tools:layout="@layout/contacts_fragment" />
 </navigation>
