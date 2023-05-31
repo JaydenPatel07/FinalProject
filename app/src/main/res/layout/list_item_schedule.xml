@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
     android:background="#85C1E9"
-    android:padding="20dp">
+    android:padding="5dp">
 
     <TextView
         android:id="@+id/home_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/home_pic"
         app:layout_constraintLeft_toRightOf="@id/home_pic"
@@ -25,7 +26,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="75dp"
         android:layout_marginBottom="10dp"
-
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
         tools:src="@drawable/ic_launcher_foreground" />
@@ -35,30 +36,31 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="1dp"
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="parent" />
 
     <TextView
         android:id="@+id/away_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:text="Away"
+        android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/home_text"
         app:layout_constraintEnd_toEndOf="@+id/away_pic"
         app:layout_constraintStart_toStartOf="@+id/away_pic"
-        app:layout_constraintTop_toTopOf="@+id/home_text" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/away_pic"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:scaleType="fitCenter"
         android:layout_marginRight="75dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -105,10 +107,8 @@
         android:layout_marginLeft="15dp"
         android:text="8/31"
         android:textSize="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/home_text"
-        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="20dp" />
+        tools:layout_editor_absoluteY="40dp" />
 
     <TextView
         android:id="@+id/time"

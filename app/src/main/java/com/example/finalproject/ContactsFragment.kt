@@ -4,15 +4,22 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.finalproject.databinding.ContactsFragmentBinding
 
-class ContactsFragment : AppCompatActivity() {
-    lateinit var binding: ContactsFragmentBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ContactsFragmentBinding.inflate(layoutInflater)
+class ContactsFragment : Fragment() {
+    private var _binding: ContactsFragmentBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = ContactsFragmentBinding.inflate(inflater, container, false)
         val rootView = binding.root
-        setContentView(rootView)
 
         binding.mail.setOnClickListener {
             composeEmail("patelj23@hsnet.ahsd.org", "Question to Abington Heights", "What time school start?")
@@ -20,15 +27,13 @@ class ContactsFragment : AppCompatActivity() {
         binding.phone.setOnClickListener {
             dialPhoneNumber("5706876571")
         }
-     //   binding.visit.setOnClickListener {
-      //      showMap("geo:41.49358534621268, -75.72353415948145")
-       // }
         binding.facebook.setOnClickListener {
             openWebPage("https://www.facebook.com/friendsofahsoccer/")
         }
         binding.insta.setOnClickListener {
             openWebPage("https://www.instagram.com/ahboysoc/")
         }
+        return rootView
     }
 
     fun composeEmail(addresses: String, subject: String, body: String) {
@@ -38,32 +43,30 @@ class ContactsFragment : AppCompatActivity() {
             putExtra(Intent.EXTRA_SUBJECT, subject)
             putExtra(Intent.EXTRA_STREAM, body)
         }
-        if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
         }
-    }
+
     fun dialPhoneNumber(phoneNumber: String) {
         val intent = Intent(Intent.ACTION_DIAL).apply {
             data = Uri.parse("tel:$phoneNumber")
         }
-        if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
-        }
+
     }
     fun showMap(geoLocation: Uri) {
         val intent = Intent(Intent.ACTION_VIEW).apply {
             data = geoLocation
         }
-        if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
-        }
+
     }
     fun openWebPage(url: String) {
         val webpage: Uri = Uri.parse(url)
         val intent = Intent(Intent.ACTION_VIEW, webpage)
-        if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
-        }
+
     }
+
+
 }
 
