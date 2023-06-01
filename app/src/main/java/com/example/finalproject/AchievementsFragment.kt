@@ -1,5 +1,6 @@
 package com.example.finalproject
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -13,6 +14,7 @@ import com.example.finalproject.databinding.FragmentAchievementsBinding
 class AchievementsFragment : Fragment() {
 
     var team_or_individual = ""
+    lateinit var music: MediaPlayer
     private var _binding: FragmentAchievementsBinding? = null
     private val binding get() = _binding!!
 
@@ -49,10 +51,28 @@ class AchievementsFragment : Fragment() {
         }
         setHasOptionsMenu(true)
 
+        music = MediaPlayer.create(context, R.raw.music);
+        music.isLooping = true
+        music.start()
+        var current = music.currentPosition + 10000
+        music.seekTo(current)
+        binding.pauseButton.setOnClickListener {
+            if (music.isPlaying) {
+                music.pause()
+                binding.pauseButton.setImageResource(R.drawable.baseline_play_circle_24)
+            }
+            else {
+                music.start()
+                binding.pauseButton.setImageResource(R.drawable.baseline_pause_circle_24)
+            }
+        }
         return rootView
 
     }
-
+    override fun onStop() {
+        super.onStop()
+        music.release()
+    }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.options_menu,menu)
