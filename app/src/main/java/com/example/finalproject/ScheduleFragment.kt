@@ -1,10 +1,10 @@
 package com.example.finalproject
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.finalproject.databinding.FragmentIndividualRecyclerViewBinding
 import com.example.finalproject.databinding.FragmentScheduleBinding
 import com.example.finalproject.databinding.ScheduleRecyclerViewBinding
@@ -52,8 +52,19 @@ class ScheduleFragment : Fragment() {
         val myAdapter = GameAdapter(games)
         binding.recyclerView.adapter = myAdapter
 
+        setHasOptionsMenu(true)
+
         return rootView
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu,menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController()) || super.onContextItemSelected(item)
     }
 
 }
