@@ -1,14 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/field"
     tools:context=".RosterFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="Nick Slusser"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/jack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jack\nCowgill"
+
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="519dp" />
+
+    <TextView
+        android:id="@+id/byron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Byron\nMaldonado"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/jack"
+        app:layout_constraintEnd_toStartOf="@+id/jack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/jack" />
+
+    <TextView
+        android:id="@+id/justin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Justin\nKim"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toStartOf="@+id/jayden"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/jayden" />
+
+    <TextView
+        android:id="@+id/nico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nico\nBustos"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/jack"
+        app:layout_constraintEnd_toStartOf="@+id/sam"
+        app:layout_constraintStart_toEndOf="@+id/jayden"
+        app:layout_constraintTop_toBottomOf="@+id/jayden" />
+
+    <TextView
+        android:id="@+id/rob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Robert\nSaunders"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/jack"
+        app:layout_constraintEnd_toStartOf="@+id/jayden"
+        app:layout_constraintStart_toEndOf="@+id/justin"
+        app:layout_constraintTop_toBottomOf="@+id/jayden" />
+
+    <TextView
+        android:id="@+id/jayden"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jayden\nPatel"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="286dp" />
+
+    <TextView
+        android:id="@+id/sam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sam\nSpecht"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/jayden"
+        app:layout_constraintTop_toTopOf="@+id/jayden" />
+
+    <TextView
+        android:id="@+id/niko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niko\nWilliams"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/jack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/jack"
+        app:layout_constraintTop_toTopOf="@+id/jack" />
+
+    <TextView
+        android:id="@+id/kohen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="Kohen\nStiles"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/jayden"
+        app:layout_constraintEnd_toStartOf="@+id/jayden"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/justin" />
+
+    <TextView
+        android:id="@+id/mike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="Michael\nMaldonado"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/jayden"
+        app:layout_constraintEnd_toStartOf="@+id/sam"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toEndOf="@+id/jayden"
+        app:layout_constraintTop_toTopOf="@+id/kohen" />
+
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

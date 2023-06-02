@@ -2,10 +2,12 @@ package com.example.finalproject
 
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast.LENGTH_SHORT
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.finalproject.databinding.FragmentIndividualRecyclerViewBinding
+import com.google.android.material.snackbar.Snackbar
 
 class IndividualAchievementsFragment : Fragment() {
     private var _binding: FragmentIndividualRecyclerViewBinding? = null
@@ -35,6 +37,9 @@ class IndividualAchievementsFragment : Fragment() {
         val myAdapter = PlayerAdapter(players)
         binding.recyclerView.adapter = myAdapter
         setHasOptionsMenu(true)
+
+        val mySnackbar = Snackbar.make(rootView, "Drag to scroll through more!", LENGTH_SHORT)
+        mySnackbar.show()
 
         return rootView
 

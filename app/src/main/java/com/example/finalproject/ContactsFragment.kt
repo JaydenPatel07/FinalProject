@@ -2,13 +2,15 @@ package com.example.finalproject
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.*
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.finalproject.databinding.ContactsFragmentBinding
+import com.google.android.material.snackbar.Snackbar
+
 
 class ContactsFragment : Fragment() {
     private var _binding: ContactsFragmentBinding? = null
@@ -35,6 +37,7 @@ class ContactsFragment : Fragment() {
         }
         setHasOptionsMenu(true)
 
+        val snackbar = Snackbar.make(requireView(), "Snackbar test", Snackbar.LENGTH_SHORT).show()
         return rootView
 
     }
