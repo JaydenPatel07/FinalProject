@@ -24,7 +24,11 @@ class ContactsFragment : Fragment() {
         val rootView = binding.root
 
         binding.mail.setOnClickListener {
-            composeEmail("patelj23@hsnet.ahsd.org", "Question to Abington Heights", "What time school start?")
+            composeEmail(
+                "patelj23@hsnet.ahsd.org",
+                "Question to Abington Heights",
+                "What time school start?"
+            )
         }
         binding.phone.setOnClickListener {
             dialPhoneNumber("5706876571")
@@ -37,7 +41,8 @@ class ContactsFragment : Fragment() {
         }
         setHasOptionsMenu(true)
 
-        val snackbar = Snackbar.make(requireView(), "Snackbar test", Snackbar.LENGTH_SHORT).show()
+        //val snackbar = Snackbar.make(binding.root, "You can ", Snackbar.LENGTH_SHORT).show()
+
         return rootView
 
     }

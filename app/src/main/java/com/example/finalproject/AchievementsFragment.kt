@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.finalproject.databinding.FragmentAchievementsBinding
@@ -54,15 +55,20 @@ class AchievementsFragment : Fragment() {
         music = MediaPlayer.create(context, R.raw.music);
         music.isLooping = true
         music.start()
+
         var current = music.currentPosition + 10000
         music.seekTo(current)
         binding.pauseButton.setOnClickListener {
             if (music.isPlaying) {
                 music.pause()
+                Toast.makeText(context,"You have paused the music!", Toast.LENGTH_SHORT).show()
+
                 binding.pauseButton.setImageResource(R.drawable.baseline_play_circle_24)
             }
             else {
                 music.start()
+                Toast.makeText(context,"You have started the music!", Toast.LENGTH_SHORT).show()
+
                 binding.pauseButton.setImageResource(R.drawable.baseline_pause_circle_24)
             }
         }
