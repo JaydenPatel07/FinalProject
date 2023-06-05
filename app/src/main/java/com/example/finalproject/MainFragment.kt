@@ -26,6 +26,9 @@ class MainFragment : Fragment() {
             rootView.findNavController().navigate(action)
       }
         binding.acheivementsButton.setOnClickListener {
+            var dialog = CustomDialogFragment()
+
+            dialog.show( "customDialog")
             val action = MainFragmentDirections.actionMainFragmentToAchievementsFragment()
             rootView.findNavController().navigate(action)
         }
