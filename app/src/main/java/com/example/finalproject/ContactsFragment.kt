@@ -25,9 +25,9 @@ class ContactsFragment : Fragment() {
 
         binding.mail.setOnClickListener {
             composeEmail(
-                "patelj23@hsnet.ahsd.org",
-                "Question to Abington Heights",
-                "What time school start?"
+                "dyskaf@ahsd.org",
+                "Question to Abington Heights Soccer",
+                " "
             )
         }
         binding.phone.setOnClickListener {
@@ -40,8 +40,12 @@ class ContactsFragment : Fragment() {
             openWebPage("https://www.instagram.com/ahboysoc/")
         }
         setHasOptionsMenu(true)
-
+        binding.camera.setOnClickListener {
+            openWebPage("https://www.byronmaldonadophotography.com/Sports/Abington-Heights-Soccer")
+        }
         //val snackbar = Snackbar.make(binding.root, "You can ", Snackbar.LENGTH_SHORT).show()
+
+
 
         return rootView
 
@@ -85,6 +89,9 @@ class ContactsFragment : Fragment() {
         val intent = Intent(Intent.ACTION_VIEW, webpage)
             startActivity(intent)
         }
+
+
+
     }
 
 

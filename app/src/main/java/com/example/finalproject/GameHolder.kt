@@ -11,7 +11,7 @@ class GameHolder(val binding: ListItemScheduleBinding) :
     fun bindGame(game: Game) {
         currentGame = game
         binding.awayPic.setImageResource(currentGame.awayPicResourceID)
-        binding.homePic.setImageResource(currentGame.homePicResourceID)
+       binding.homePic.setImageResource(currentGame.homePicResourceID)
         binding.scoreHome.text = currentGame.homeScore.toString()
         binding.awayScore.text = currentGame.awayScore.toString()
         binding.awayText.text = currentGame.awayName

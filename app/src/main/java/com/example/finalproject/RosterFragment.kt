@@ -20,7 +20,82 @@ class RosterFragment : Fragment() {
     ): View? {
         _binding = FragmentRosterBinding.inflate(inflater, container, false)
         val rootView = binding.root
-        return inflater.inflate(R.layout.fragment_roster, container, false)
+        binding.kohen.setVisibility(View.INVISIBLE)
+        binding.mike.setVisibility(View.INVISIBLE)
+        binding.justin.setVisibility(View.INVISIBLE)
+        binding.jayden.setVisibility(View.INVISIBLE)
+        binding.sam.setVisibility(View.INVISIBLE)
+        binding.byron.setVisibility(View.INVISIBLE)
+        binding.jack.setVisibility(View.INVISIBLE)
+        binding.niko.setVisibility(View.INVISIBLE)
+        binding.rob.setVisibility(View.INVISIBLE)
+        binding.nico.setVisibility(View.INVISIBLE)
+        binding.nick.setVisibility(View.INVISIBLE)
+        binding.mity.setVisibility(View.INVISIBLE)
+        binding.luke.setVisibility(View.INVISIBLE)
+        binding.enzo.setVisibility(View.INVISIBLE)
+        binding.palle.setVisibility(View.INVISIBLE)
+        binding.nath.setVisibility(View.INVISIBLE)
+        binding.hiller.setVisibility(View.INVISIBLE)
+        binding.hank.setVisibility(View.INVISIBLE)
+        binding.grogan.setVisibility(View.INVISIBLE)
+        binding.red.setVisibility(View.INVISIBLE)
+        binding.brad.setVisibility(View.INVISIBLE)
+        binding.phil.setVisibility(View.INVISIBLE)
+
+        binding.starting.setOnClickListener{
+            binding.mity.setVisibility(View.INVISIBLE)
+            binding.luke.setVisibility(View.INVISIBLE)
+            binding.enzo.setVisibility(View.INVISIBLE)
+            binding.palle.setVisibility(View.INVISIBLE)
+            binding.nath.setVisibility(View.INVISIBLE)
+            binding.hiller.setVisibility(View.INVISIBLE)
+            binding.hank.setVisibility(View.INVISIBLE)
+            binding.grogan.setVisibility(View.INVISIBLE)
+            binding.red.setVisibility(View.INVISIBLE)
+            binding.brad.setVisibility(View.INVISIBLE)
+            binding.phil.setVisibility(View.INVISIBLE)
+
+            binding.kohen.setVisibility(View.VISIBLE)
+            binding.mike.setVisibility(View.VISIBLE)
+            binding.justin.setVisibility(View.VISIBLE)
+            binding.jayden.setVisibility(View.VISIBLE)
+            binding.sam.setVisibility(View.VISIBLE)
+            binding.byron.setVisibility(View.VISIBLE)
+            binding.jack.setVisibility(View.VISIBLE)
+            binding.niko.setVisibility(View.VISIBLE)
+            binding.rob.setVisibility(View.VISIBLE)
+            binding.nico.setVisibility(View.VISIBLE)
+            binding.nick.setVisibility(View.VISIBLE)
+        }
+        binding.button2.setOnClickListener{
+            binding.kohen.setVisibility(View.INVISIBLE)
+            binding.mike.setVisibility(View.INVISIBLE)
+            binding.justin.setVisibility(View.INVISIBLE)
+            binding.jayden.setVisibility(View.INVISIBLE)
+            binding.sam.setVisibility(View.INVISIBLE)
+            binding.byron.setVisibility(View.INVISIBLE)
+            binding.jack.setVisibility(View.INVISIBLE)
+            binding.niko.setVisibility(View.INVISIBLE)
+            binding.rob.setVisibility(View.INVISIBLE)
+            binding.nico.setVisibility(View.INVISIBLE)
+            binding.nick.setVisibility(View.INVISIBLE)
+
+            binding.mity.setVisibility(View.VISIBLE)
+            binding.luke.setVisibility(View.VISIBLE)
+            binding.enzo.setVisibility(View.VISIBLE)
+            binding.palle.setVisibility(View.VISIBLE)
+            binding.nath.setVisibility(View.VISIBLE)
+            binding.hiller.setVisibility(View.VISIBLE)
+            binding.hank.setVisibility(View.VISIBLE)
+            binding.grogan.setVisibility(View.VISIBLE)
+            binding.red.setVisibility(View.VISIBLE)
+            binding.brad.setVisibility(View.VISIBLE)
+            binding.phil.setVisibility(View.VISIBLE)
+
+        }
+        return rootView
+
     }
 
 

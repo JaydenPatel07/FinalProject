@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_achievements" >
         <action
             android:id="@+id/action_achievementsFragment_to_individualAchievementsFragment"
-            app:destination="@id/individualAchievementsFragment" />
+            app:destination="@id/individualAchievementsFragment"
+            app:enterAnim="@anim/enter_left_to_right" />
     </fragment>
     <fragment
         android:id="@+id/rosterFragment"
@@ -29,7 +30,9 @@
             app:destination="@id/achievementsFragment" />
         <action
             android:id="@+id/action_mainFragment_to_rosterFragment"
-            app:destination="@id/rosterFragment" />
+            app:destination="@id/rosterFragment"
+
+            />
         <action
             android:id="@+id/action_mainFragment_to_scheduleFragment"
             app:destination="@id/scheduleFragment" />

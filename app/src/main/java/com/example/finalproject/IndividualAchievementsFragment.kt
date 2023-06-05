@@ -38,8 +38,8 @@ class IndividualAchievementsFragment : Fragment() {
         binding.recyclerView.adapter = myAdapter
         setHasOptionsMenu(true)
 
-        val mySnackbar = Snackbar.make(rootView, "Drag to scroll through more!", LENGTH_SHORT)
-        mySnackbar.show()
+       // val mySnackbar = Snackbar.make(rootView, "Drag to scroll through more!", LENGTH_SHORT)
+       // mySnackbar.show()
 
         return rootView
 

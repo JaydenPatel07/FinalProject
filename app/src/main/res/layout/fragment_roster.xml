@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/field"
-    tools:context=".RosterFragment">
+    tools:context=".RosterFragment"
+    tools:ignore="ExtraText">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -159,6 +160,181 @@
         app:layout_constraintStart_toEndOf="@+id/jayden"
         app:layout_constraintTop_toTopOf="@+id/kohen" />
 
+    <Button
+        android:id="@+id/starting"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="See Starting Lineup"
+        app:layout_constraintBottom_toTopOf="@+id/kohen"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:text="See Substitutes"
+        app:layout_constraintBottom_toBottomOf="@+id/starting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/starting" />
+
+    <TextView
+        android:id="@+id/mity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Michael Hartshorn"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/luke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Luke Kozar"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/mity" />
+
+    <TextView
+        android:id="@+id/enzo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enzo Capozzi"
+        android:layout_marginTop="20dp"
+
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/luke" />
+
+    <TextView
+        android:id="@+id/palle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:text="Abhinav Palle"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/enzo" />
+
+    <TextView
+        android:id="@+id/nath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abhinav Nath"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/palle" />
+
+    <TextView
+        android:id="@+id/hiller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Michael Hiller"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/starting"
+        app:layout_constraintTop_toBottomOf="@+id/nath" />
+
+    <TextView
+        android:id="@+id/hank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Henry Barbrack"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/hiller" />
+
+    <TextView
+        android:id="@+id/grogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gavin Grogan"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/hank" />
+
+    <TextView
+        android:id="@+id/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Robert Earl Delucy"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/grogan" />
+
+    <TextView
+        android:id="@+id/brad"
+        android:layout_width="121dp"
+        android:layout_height="30dp"
+        android:text="Brad Ames"
+        android:layout_marginTop="20dp"
+
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/red" />
+
+    <TextView
+        android:layout_width="121dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/phil"
+
+        android:text="Phil Sykes"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/brad" /><![CDATA[
+
     />
 
+]]>
 </androidx.constraintlayout.widget.ConstraintLayout>

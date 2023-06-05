@@ -1,6 +1,7 @@
 package com.example.finalproject
 
 import android.os.Bundle
+import android.transition.TransitionInflater
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
@@ -20,9 +21,10 @@ class MainFragment : Fragment() {
         val rootView = binding.root
 
         binding.contactsButton.setOnClickListener {
+
             val action = MainFragmentDirections.actionMainFragmentToContactsFragment()
             rootView.findNavController().navigate(action)
-        }
+      }
         binding.acheivementsButton.setOnClickListener {
             val action = MainFragmentDirections.actionMainFragmentToAchievementsFragment()
             rootView.findNavController().navigate(action)

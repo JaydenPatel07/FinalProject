@@ -11,10 +11,10 @@
         android:id="@+id/insta"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginTop="136dp"
         android:background="#85C1E9"
         android:scaleType="fitCenter"
         android:src="@drawable/insta"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/mail"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +71,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/camera"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@android:drawable/ic_menu_camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#85C1E9"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+    <TextView
+        android:id="@+id/see"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:text="See Our Season In Picture"
+        app:layout_constraintBottom_toTopOf="@+id/camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/insta" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
